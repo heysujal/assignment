@@ -3,9 +3,6 @@ const makeIconURL = (iconId) =>
   `https://openweathermap.org/img/wn/${iconId}@2x.png`;
 
 const getFormattedWeatherData = async (city, units = "metric") => {
-  if(city.length == 0){
-    city = "Delhi"
-  }
   const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=${units}`;
   let data;
   try{
